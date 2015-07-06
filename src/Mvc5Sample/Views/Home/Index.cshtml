@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Usage";
+}
+
+<h1>@ViewBag.Title</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>@@LocaleDateTime(null)</td>
+                    <td>@LocaleDateTime(null)</td>
+                </tr>
+                <tr>
+                    <td>@@LocaleDateTime(DateTime.Now)</td>
+                    <td>@LocaleDateTime(DateTime.Now)</td>
+                </tr>
+                <tr>
+                    <td>@@LocaleDateTime(DateTime.UtcNow)</td>
+                    <td>@LocaleDateTime(DateTime.UtcNow)</td>
+                </tr>
+                <tr>
+                    <td>@@LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local))</td>
+                    <td>@LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local))</td>
+                </tr>
+                <tr>
+                    <td>@@LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified))</td>
+                    <td>@LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified))</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@helper LocaleDateTime(DateTime? dateTime)
+{
+    if (dateTime.HasValue)
+    {
+        var elementId = Guid.NewGuid();
+        var msSinceUnixEpoch = (long)((TimeSpan)(dateTime.Value.ToUniversalTime() - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds;
+
+        <span id="aspnet-browser-locale-@elementId"></span>
+        <script>
+            var jsDate = new Date(@msSinceUnixEpoch);
+            document.getElementById('aspnet-browser-locale-@elementId').innerHTML = jsDate.toLocaleString();
+        </script>
+    }
+    else
+    {
+        @:&mdash;
+    }
+}
