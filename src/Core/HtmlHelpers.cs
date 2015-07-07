@@ -33,8 +33,9 @@ namespace AspNetBrowserLocale.Core
             }
 
             return MvcHtmlString.Create(string.Format(
-                @"<span data-aspnet-browser-locale=""{0}""></span>",
-                msSinceUnixEpoch));
+                @"<span data-aspnet-browser-locale=""{0}"">{1}</span>",
+                msSinceUnixEpoch,
+                dateTime.HasValue ? dateTime.Value.ToUniversalTime().ToString() + " UTC" : null));
         }
     }
 }
