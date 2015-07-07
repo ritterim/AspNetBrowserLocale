@@ -14,7 +14,7 @@ namespace AspNetBrowserLocale.Core
         var element = elements[i];
         var msString = element.dataset.aspnetBrowserLocale;
         if (msString) {{
-            var jsDate = new Date(parseInt(msString));
+            var jsDate = new Date(parseInt(msString, 10));
             element.innerHTML = jsDate.toLocaleString();
         }}
         else {{
