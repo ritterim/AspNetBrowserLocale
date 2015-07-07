@@ -5,9 +5,11 @@ namespace AspNetBrowserLocale.Core
 {
     public static class HtmlHelpers
     {
+        private const string NullValueDisplay = "&mdash;";
+
         public static MvcHtmlString InitializeLocaleDateTime(this HtmlHelper htmlHelper)
         {
-            return MvcHtmlString.Create(
+            return MvcHtmlString.Create(string.Format(
 @"<script>
     var elements = document.querySelectorAll('[data-aspnet-browser-locale]');
     for (var i = 0; i < elements.length; i++) {{
@@ -18,10 +20,11 @@ namespace AspNetBrowserLocale.Core
             element.innerHTML = jsDate.toLocaleString();
         }}
         else {{
-            element.innerHTML = '&mdash;';
+            element.innerHTML = '{0}';
         }}
     }}
-</script>");
+</script>",
+NullValueDisplay));
         }
 
         public static MvcHtmlString LocaleDateTime(this HtmlHelper htmlHelper, DateTime? dateTime)
@@ -35,7 +38,7 @@ namespace AspNetBrowserLocale.Core
             return MvcHtmlString.Create(string.Format(
                 @"<span data-aspnet-browser-locale=""{0}"">{1}</span>",
                 msSinceUnixEpoch,
-                dateTime.HasValue ? dateTime.Value.ToUniversalTime().ToString() + " UTC" : null));
+                dateTime.HasValue ? dateTime.Value.ToUniversalTime().ToString() + " UTC" : NullValueDisplay));
         }
     }
 }
