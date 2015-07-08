@@ -11,18 +11,20 @@ namespace AspNetBrowserLocale.Core
         {
             return MvcHtmlString.Create(string.Format(
 @"<script>
-    var elements = document.querySelectorAll('[data-aspnet-browser-locale]');
-    for (var i = 0; i < elements.length; i++) {{
-        var element = elements[i];
-        var msString = element.dataset.aspnetBrowserLocale;
-        if (msString) {{
-            var jsDate = new Date(parseInt(msString, 10));
-            element.innerHTML = jsDate.toLocaleString();
+    (function() {{
+        var elements = document.querySelectorAll('[data-aspnet-browser-locale]');
+        for (var i = 0; i < elements.length; i++) {{
+            var element = elements[i];
+            var msString = element.dataset.aspnetBrowserLocale;
+            if (msString) {{
+                var jsDate = new Date(parseInt(msString, 10));
+                element.innerHTML = jsDate.toLocaleString();
+            }}
+            else {{
+                element.innerHTML = '{0}';
+            }}
         }}
-        else {{
-            element.innerHTML = '{0}';
-        }}
-    }}
+    }})();
 </script>",
 NullValueDisplay));
         }
