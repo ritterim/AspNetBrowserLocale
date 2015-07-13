@@ -17,9 +17,6 @@ namespace AspNetBrowserLocale.Core
                 case BrowserDateDisplay.TimeOnly:
                     return "LT";
 
-                case BrowserDateDisplay.TimeOnlyWithSeconds:
-                    return "LTS";
-
                 default:
                     throw new ArgumentException("browserDateDisplay value is not supported.");
             }

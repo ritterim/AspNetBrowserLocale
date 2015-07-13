@@ -5,6 +5,5 @@
         DateTime,
         DateOnly,
         TimeOnly,
-        TimeOnlyWithSeconds,
     }
 }
