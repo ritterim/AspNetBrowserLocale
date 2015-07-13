@@ -9,6 +9,9 @@ namespace AspNetBrowserLocale.Core
             switch (browserDateDisplay)
             {
                 case BrowserDateDisplay.DateTime:
+                    return "lll";
+
+                case BrowserDateDisplay.NumericDateTime:
                     return "l LT";
 
                 case BrowserDateDisplay.DateOnly:

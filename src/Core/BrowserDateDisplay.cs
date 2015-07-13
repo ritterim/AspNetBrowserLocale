@@ -3,6 +3,7 @@
     public enum BrowserDateDisplay
     {
         DateTime,
+        NumericDateTime,
         DateOnly,
         TimeOnly,
     }
