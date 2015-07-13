@@ -28,9 +28,10 @@ if (typeof moment === 'undefined') {{
             var msString = element.dataset.aspnetBrowserLocale;
             if (msString) {{
                 var m = moment(parseInt(msString, 10));
-
                 var momentFormat = element.dataset.aspnetBrowserLocaleMomentjsFormat || '{0}';
+
                 element.innerHTML = m.format(momentFormat);
+                element.setAttribute('title', m.format('LLLL'));
             }}
             else {{
                 element.innerHTML = '{1}';
