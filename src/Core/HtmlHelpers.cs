@@ -35,7 +35,7 @@ if (typeof moment === 'undefined') {{
 NullValueDisplay));
         }
 
-        public static MvcHtmlString LocaleDateTime(this HtmlHelper htmlHelper, DateTime? dateTime)
+        public static MvcHtmlString BrowserDisplay(this HtmlHelper htmlHelper, DateTime? dateTime)
         {
             long? msSinceUnixEpoch = null;
             if (dateTime.HasValue)

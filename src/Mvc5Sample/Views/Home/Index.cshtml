@@ -10,24 +10,24 @@
         <table class="table table-bordered">
             <tbody>
                 <tr>
-                    <td>@@Html.LocaleDateTime(null)</td>
-                    <td>@Html.LocaleDateTime(null)</td>
+                    <td>@@Html.BrowserDisplay(null)</td>
+                    <td>@Html.BrowserDisplay(null)</td>
                 </tr>
                 <tr>
-                    <td>@@Html.LocaleDateTime(DateTime.Now)</td>
-                    <td>@Html.LocaleDateTime(DateTime.Now)</td>
+                    <td>@@Html.BrowserDisplay(DateTime.Now)</td>
+                    <td>@Html.BrowserDisplay(DateTime.Now)</td>
                 </tr>
                 <tr>
-                    <td>@@Html.LocaleDateTime(DateTime.UtcNow)</td>
-                    <td>@Html.LocaleDateTime(DateTime.UtcNow)</td>
+                    <td>@@Html.BrowserDisplay(DateTime.UtcNow)</td>
+                    <td>@Html.BrowserDisplay(DateTime.UtcNow)</td>
                 </tr>
                 <tr>
-                    <td>@@Html.LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local))</td>
-                    <td>@Html.LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local))</td>
+                    <td>@@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local))</td>
+                    <td>@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local))</td>
                 </tr>
                 <tr>
-                    <td>@@Html.LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified))</td>
-                    <td>@Html.LocaleDateTime(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified))</td>
+                    <td>@@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified))</td>
+                    <td>@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified))</td>
                 </tr>
             </tbody>
         </table>
