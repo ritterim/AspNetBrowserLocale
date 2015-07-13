@@ -6,6 +6,7 @@ namespace AspNetBrowserLocale.Core
     public static class HtmlHelpers
     {
         private const string NullValueDisplay = "&mdash;";
+        private const string DefaultMomentFormat = "l LT"; // matches BrowserDateDisplay.DateTime
 
         public static MvcHtmlString InitializeLocaleDateTime(this HtmlHelper htmlHelper)
         {
@@ -24,18 +25,24 @@ if (typeof moment === 'undefined') {{
             var msString = element.dataset.aspnetBrowserLocale;
             if (msString) {{
                 var m = moment(parseInt(msString, 10));
-                element.innerHTML = m.format('l LT');
+
+                var momentFormat = element.dataset.aspnetBrowserLocaleMomentjsFormat || '{0}';
+                element.innerHTML = m.format(momentFormat);
             }}
             else {{
-                element.innerHTML = '{0}';
+                element.innerHTML = '{1}';
             }}
         }}
     }})();
 </script>",
+DefaultMomentFormat,
 NullValueDisplay));
         }
 
-        public static MvcHtmlString BrowserDisplay(this HtmlHelper htmlHelper, DateTime? dateTime)
+        public static MvcHtmlString BrowserDisplay(
+            this HtmlHelper htmlHelper,
+            DateTime? dateTime,
+            BrowserDateDisplay browserDateDisplay = BrowserDateDisplay.DateTime)
         {
             long? msSinceUnixEpoch = null;
             if (dateTime.HasValue)
@@ -43,9 +50,12 @@ NullValueDisplay));
                 msSinceUnixEpoch = (long)((TimeSpan)(dateTime.Value.ToUniversalTime() - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc))).TotalMilliseconds;
             }
 
+            var momentFormat = BrowserDateDisplayConverter.ToMomentJsFormat(browserDateDisplay);
+
             return MvcHtmlString.Create(string.Format(
-                @"<span data-aspnet-browser-locale=""{0}"">{1}</span>",
+                @"<span data-aspnet-browser-locale=""{0}"" data-aspnet-browser-locale-momentjs-format=""{1}"">{2}</span>",
                 msSinceUnixEpoch,
+                momentFormat,
                 dateTime.HasValue ? dateTime.Value.ToUniversalTime().ToString() + " UTC" : NullValueDisplay));
         }
     }

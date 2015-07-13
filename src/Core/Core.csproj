@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowserDateDisplay.cs" />
+    <Compile Include="BrowserDateDisplayConverter.cs" />
     <Compile Include="HtmlHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -4,7 +4,9 @@
 }
 
 <h1>@ViewBag.Title</h1>
+<hr />
 
+<h2>Default BrowserDateDisplay</h2>
 <div class="row">
     <div class="col-md-6">
         <table class="table table-bordered">
@@ -33,3 +35,36 @@
         </table>
     </div>
 </div>
+
+@foreach (var browserDateDisplay in Enum.GetValues(typeof(BrowserDateDisplay)).Cast<BrowserDateDisplay>())
+{
+<h2>@browserDateDisplay</h2>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>@@Html.BrowserDisplay(null, browserDateDisplay)</td>
+                    <td>@Html.BrowserDisplay(null, browserDateDisplay)</td>
+                </tr>
+                <tr>
+                    <td>@@Html.BrowserDisplay(DateTime.Now, browserDateDisplay)</td>
+                    <td>@Html.BrowserDisplay(DateTime.Now, browserDateDisplay)</td>
+                </tr>
+                <tr>
+                    <td>@@Html.BrowserDisplay(DateTime.UtcNow, browserDateDisplay)</td>
+                    <td>@Html.BrowserDisplay(DateTime.UtcNow, browserDateDisplay)</td>
+                </tr>
+                <tr>
+                    <td>@@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local), browserDateDisplay)</td>
+                    <td>@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Local), browserDateDisplay)</td>
+                </tr>
+                <tr>
+                    <td>@@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified), browserDateDisplay)</td>
+                    <td>@Html.BrowserDisplay(new DateTime(2015, 1, 1, 0, 0, 0, DateTimeKind.Unspecified), browserDateDisplay)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+}
