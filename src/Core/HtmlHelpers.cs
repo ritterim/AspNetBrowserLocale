@@ -11,6 +11,11 @@ namespace AspNetBrowserLocale.Core
         {
             return MvcHtmlString.Create(string.Format(
 @"<script>
+if (typeof moment === 'undefined') {{
+    document.write(unescape(""%3Cscript src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js'%3E%3C/script%3E""));
+}}
+</script>
+<script>
     (function() {{
         'use strict';
         var elements = document.querySelectorAll('[data-aspnet-browser-locale]');
@@ -18,8 +23,8 @@ namespace AspNetBrowserLocale.Core
             var element = elements[i];
             var msString = element.dataset.aspnetBrowserLocale;
             if (msString) {{
-                var jsDate = new Date(parseInt(msString, 10));
-                element.innerHTML = jsDate.toLocaleString();
+                var m = moment(parseInt(msString, 10));
+                element.innerHTML = m.format('l LT');
             }}
             else {{
                 element.innerHTML = '{0}';
