@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>RimDev.AspNetBrowserLocale</id>
+    <version>0.0.0</version>
+    <authors>Ritter Insurance Marketing</authors>
+    <licenseUrl>https://raw.githubusercontent.com/ritterim/AspNetBrowserLocale/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/ritterim/AspNetBrowserLocale</projectUrl>
+    <description>Library for displaying DateTime values respecting users browser time zone.</description>
+    <copyright>Copyright 2015 Ritter Insurance Marketing</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>rimdev aspnet browser locale datetime</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\AspNetBrowserLocale.Core.dll" target="lib\net45" />
+  </files>
+</package>

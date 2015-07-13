@@ -53,10 +53,8 @@
       <NuGetSpecs Include="$(RootPath)src\**\*.nuspec" />
     </ItemGroup>
 
-    <!--
     <MakeDir Directories="$(ArtifactsPath)" Condition=" !Exists('$(ArtifactsPath)') " />
 
     <Exec Command="$(NuGetPath) pack %(NuGetSpecs.Identity) -p Configuration=$(Configuration) -outputdirectory $(ArtifactsPath) -version $(PackageVersion)" />
-    -->
   </Target>
 </Project>
