@@ -6,7 +6,10 @@ namespace AspNetBrowserLocale.Core
     public static class HtmlHelpers
     {
         private const string NullValueDisplay = "&mdash;";
-        private const string DefaultMomentFormat = "l LT"; // matches BrowserDateDisplay.DateTime
+        private const BrowserDateDisplay DefaultBrowserDateDisplay = BrowserDateDisplay.DateTime;
+
+        private static readonly string DefaultMomentFormat =
+            BrowserDateDisplayConverter.ToMomentJsFormat(DefaultBrowserDateDisplay);
 
         public static MvcHtmlString InitializeLocaleDateTime(this HtmlHelper htmlHelper)
         {
@@ -42,7 +45,7 @@ NullValueDisplay));
         public static MvcHtmlString BrowserDisplay(
             this HtmlHelper htmlHelper,
             DateTime? dateTime,
-            BrowserDateDisplay browserDateDisplay = BrowserDateDisplay.DateTime)
+            BrowserDateDisplay browserDateDisplay = DefaultBrowserDateDisplay)
         {
             long? msSinceUnixEpoch = null;
             if (dateTime.HasValue)
