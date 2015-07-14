@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Mvc5Sample
+namespace RimDev.AspNetBrowserLocale.Mvc5Sample
 {
     public class FilterConfig
     {

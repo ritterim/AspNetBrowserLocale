@@ -1,4 +1,4 @@
-﻿namespace AspNetBrowserLocale.Core
+﻿namespace RimDev.AspNetBrowserLocale
 {
     public enum BrowserDateDisplay
     {
