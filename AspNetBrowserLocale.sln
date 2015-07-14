@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimDev.AspNetBrowserLocale", "src\Core\RimDev.AspNetBrowserLocale.csproj", "{B54092C1-9EC3-4A3E-B5F5-51BE497DFC4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimDev.AspNetBrowserLocale", "src\RimDev.AspNetBrowserLocale\RimDev.AspNetBrowserLocale.csproj", "{B54092C1-9EC3-4A3E-B5F5-51BE497DFC4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimDev.AspNetBrowserLocale.Mvc5Sample", "src\Mvc5Sample\RimDev.AspNetBrowserLocale.Mvc5Sample.csproj", "{51ACB054-902C-446C-A87D-3E5134F02FB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimDev.AspNetBrowserLocale.Mvc5Sample", "src\RimDev.AspNetBrowserLocale.Mvc5Sample\RimDev.AspNetBrowserLocale.Mvc5Sample.csproj", "{51ACB054-902C-446C-A87D-3E5134F02FB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

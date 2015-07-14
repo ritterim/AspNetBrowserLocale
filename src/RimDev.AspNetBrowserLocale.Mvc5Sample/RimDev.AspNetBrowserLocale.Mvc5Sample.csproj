@@ -121,7 +121,7 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\RimDev.AspNetBrowserLocale.csproj">
+    <ProjectReference Include="..\RimDev.AspNetBrowserLocale\RimDev.AspNetBrowserLocale.csproj">
       <Project>{b54092c1-9ec3-4a3e-b5f5-51be497dfc4d}</Project>
       <Name>RimDev.AspNetBrowserLocale</Name>
     </ProjectReference>
