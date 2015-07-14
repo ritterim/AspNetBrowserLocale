@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Mvc5Sample
+namespace RimDev.AspNetBrowserLocale.Mvc5Sample
 {
     public class RouteConfig
     {

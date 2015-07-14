@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AspNetBrowserLocale.Core
+namespace RimDev.AspNetBrowserLocale
 {
     public class BrowserDateDisplayConverter
     {

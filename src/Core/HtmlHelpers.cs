@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
 
-namespace AspNetBrowserLocale.Core
+namespace RimDev.AspNetBrowserLocale
 {
     public static class HtmlHelpers
     {

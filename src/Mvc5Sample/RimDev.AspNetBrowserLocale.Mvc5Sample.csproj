@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mvc5Sample</RootNamespace>
-    <AssemblyName>Mvc5Sample</AssemblyName>
+    <RootNamespace>RimDev.AspNetBrowserLocale.Mvc5Sample</RootNamespace>
+    <AssemblyName>RimDev.AspNetBrowserLocale.Mvc5Sample</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -121,9 +121,9 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
+    <ProjectReference Include="..\Core\RimDev.AspNetBrowserLocale.csproj">
       <Project>{b54092c1-9ec3-4a3e-b5f5-51be497dfc4d}</Project>
-      <Name>Core</Name>
+      <Name>RimDev.AspNetBrowserLocale</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

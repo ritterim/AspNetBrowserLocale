@@ -7,8 +7,8 @@
     <ProjectGuid>{B54092C1-9EC3-4A3E-B5F5-51BE497DFC4D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AspNetBrowserLocale.Core</RootNamespace>
-    <AssemblyName>AspNetBrowserLocale.Core</AssemblyName>
+    <RootNamespace>RimDev.AspNetBrowserLocale</RootNamespace>
+    <AssemblyName>RimDev.AspNetBrowserLocale</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

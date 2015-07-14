@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Mvc5Sample.Controllers
+namespace RimDev.AspNetBrowserLocale.Mvc5Sample.Controllers
 {
     public class HomeController : Controller
     {
