@@ -2,6 +2,9 @@
 
 Provides functionality for showing DateTime information respecting the time zone of the users browser using Razor.
 
+![NuGet Version](https://img.shields.io/nuget/v/RimDev.AspNetBrowserLocale.svg)
+![NuGet Download Count](https://img.shields.io/nuget/dt/RimDev.AspNetBrowserLocale.svg)
+
 ## Usage (Razor)
 
 In **_Layout.cshtml** or a similar file, add the following:
